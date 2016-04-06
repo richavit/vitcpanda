@@ -11,7 +11,7 @@ import os
 from django.core.urlresolvers import reverse_lazy
 from os.path import dirname, join, exists
 import sys
-
+#SECRET_KEY = 'w9%l1x#%)ykisj*e(3p=@!59h&ud1u&k4eu3%8ce^0z=33ial7'
 # Build paths inside the project like this: join(BASE_DIR, "directory")
 BASE_DIR = dirname(dirname(dirname(__file__)))
 STATICFILES_DIRS = [join(BASE_DIR, 'static')]
@@ -71,6 +71,8 @@ if exists(env_file):
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # Raises ImproperlyConfigured exception if SECRET_KEY not in os.environ
+SECRET_KEY = ')$!g#vnxgtr+4-d_emy$8))36m8+y#4n#-p9casi@^ukq&ofk0'
+
 SECRET_KEY = env('SECRET_KEY')
 
 ALLOWED_HOSTS = []
