@@ -49,7 +49,7 @@ def offer(request):
         if form.is_valid():
             newdoc = Service(user = request.user, title = request.POST['title'], docfile = request.FILES['docfile'], active = request.POST['active'], description = request.POST['description'], duraction = request.POST['duraction'], zip_Code = request.POST['zip_Code'], address = request.POST['address'], expire_date = request.POST['expire_date'])
             newdoc.save()
-            return redirect('services.views.offer_detail_service', pk=newdoc.pk)
+            return redirect('services:offer_detail_service', pk=newdoc.pk)
      else:
         form = ServiceForm() # A empty, unbound form
 
@@ -63,13 +63,13 @@ def offer(request):
     )
 
 
-login_required
+@login_required
 def offer_detail_service(request, pk):
     model = Service
     user_id=request.user.id
     #post = Product.objects.filter(user_id = request.user.id, pk=pk)
     post = get_object_or_404(Service, user_id=request.user.id, pk=pk)
-    return render(request, 'services/offer_detail.html', {'post': post})
+    return render(request, 'services/offerd.html', {'post': post})
 
 
 

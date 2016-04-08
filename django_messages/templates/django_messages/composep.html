@@ -25,7 +25,7 @@
    
   <div class="col-md-10"> <tr><th>Recipient:</th><td><input type="text" name="recipient" value="{% for object in zipcode %}
   
-  {% if object.name1 == post.zip_Code %}
+  {% if object.areacode == post.zip_Code %}
   
      {{ object.email }} ,
   {% else %}

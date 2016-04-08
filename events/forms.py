@@ -8,6 +8,7 @@ class EventForm(forms.Form):
     snap = forms.FileField(required=False,label='Event Look-up Picture ')    
     date_event = forms.DateTimeField(label='Event Date',widget=forms.TextInput(attrs={'placeholder': 'Title of event'}))   
     description = forms.CharField(label='Description', widget=forms.TextInput(attrs={'placeholder': 'Give some overview of your event'}))
+    zip_Code = forms.CharField(label='Areacode', widget=forms.TextInput(attrs={'placeholder': 'Give areacode of your event'}))
     place = forms.CharField(
         label='Place', widget=forms.TextInput(attrs={'placeholder': 'Location of your event offer '})
     )    
@@ -20,7 +21,7 @@ class HostForm(forms.ModelForm):
 
     class Meta:
         model = Event
-        fields = ('eventtype', 'snap', 'date_event', 'description','place', 'dresscode', 'duration', )
+        fields = ('eventtype', 'snap', 'date_event', 'description', 'zip_Code', 'place', 'dresscode', 'duration', )
   
     
     

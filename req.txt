@@ -7,4 +7,4 @@ django-authtools>=1.4.0
 easy-thumbnails>=2.3
 
 
-
+SECRET_KEY = 'w9%l1x#%)ykisj*e(3p=@!59h&ud1u&k4eu3%8ce^0z=33ial7'
